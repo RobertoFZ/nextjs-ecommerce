@@ -16,7 +16,7 @@ const Navbar: React.FC = ({ ...props }): ReactElement => {
 	return (
 		<ElevationScroll {...props}>
 			<NavbarContainer>
-				<AppBar position="static">
+				<AppBar position="fixed">
 					<Toolbar style={{ flex: '1 1 0' }}>
 						<AppItem>
 							<MenuIconButton

@@ -1,5 +1,5 @@
 import MainLayout from 'components/layouts/MainLayout'
-import Hero from 'components/molecules/Hero'
+import Hero from 'components/molecules/Hero/Hero'
 import React, { ReactNode } from 'react'
 
 const Home = (): ReactNode => {
