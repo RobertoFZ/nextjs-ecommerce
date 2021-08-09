@@ -5,6 +5,7 @@ import styled from 'styled-components'
 interface IAppButton {
 	theme: Theme
 	backgroundColor?: string
+	lgMargin?: number
 }
 const AppButton = styled(Button)`
 	${({ backgroundColor = colors.LIGHT_GRAY }: IAppButton) =>
@@ -50,6 +51,11 @@ const AppButton = styled(Button)`
 			right: -40px;
 			opacity: 0;
 		}
+	}
+
+	@media (min-width: 600px) {
+		${({ lgMargin }: IAppButton) =>
+			`margin-right: ${lgMargin ? `${lgMargin}px` : ''} !important;`}
 	}
 `
 
