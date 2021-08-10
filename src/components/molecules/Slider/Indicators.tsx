@@ -6,9 +6,14 @@ import IndicatorsContainer from './IndicatorsContainer'
 interface IIndicators {
 	slides: ISlideElement[]
 	onSlideChange: (index: number) => void
+	currentSlide: number
 }
 
-const Indicators = ({ slides, onSlideChange }: IIndicators) => (
+const Indicators = ({
+	currentSlide,
+	slides,
+	onSlideChange,
+}: IIndicators) => (
 	<IndicatorsContainer>
 		{slides.map((_, index) => {
 			const setCurrentSlide = () => onSlideChange(index)
@@ -18,6 +23,7 @@ const Indicators = ({ slides, onSlideChange }: IIndicators) => (
 					role="button"
 					data-slide={`0${index + 1}`}
 					onClick={setCurrentSlide}
+					active={currentSlide === index}
 				/>
 			)
 		})}

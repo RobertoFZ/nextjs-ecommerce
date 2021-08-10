@@ -31,7 +31,11 @@ const Slider = ({ slides }: ISlider) => {
 					background={slider.src}
 				/>
 			))}
-			<Indicators slides={slides} onSlideChange={onSlideChange} />
+			<Indicators
+				currentSlide={currentSlide}
+				slides={slides}
+				onSlideChange={onSlideChange}
+			/>
 		</SliderContainer>
 	)
 }

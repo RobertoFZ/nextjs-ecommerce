@@ -1,5 +1,9 @@
 import styled from 'styled-components'
 
+interface IIndicator{
+	active?: boolean
+}
+
 const Indicator = styled.span`
   display: block;
 	height: 20px;
@@ -14,7 +18,7 @@ const Indicator = styled.span`
 
 	&::before {
 		content: '';
-		display: block;
+		${({ active }: IIndicator) => `display: ${active ? 'block': 'none'};`}
 		position: absolute;
 		background-color: #222222;
 		width: 40px;
@@ -35,6 +39,7 @@ const Indicator = styled.span`
 		line-height: 1em;
 		font-weight: 800;
     top: 30%;
+		${({ active }: IIndicator) => `opacity: ${active ? 1: 0.2};`}
 	}
 `
 
