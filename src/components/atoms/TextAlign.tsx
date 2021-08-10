@@ -20,7 +20,7 @@ const TextAlign = styled.div`
 
 	@media ${devices.laptop} {
 		text-align: ${({ align, lg }: TextAlignProps) =>
-			lg ?? align ?? 'center'};
+		lg ?? align ?? 'center'};
 	}
 `
 

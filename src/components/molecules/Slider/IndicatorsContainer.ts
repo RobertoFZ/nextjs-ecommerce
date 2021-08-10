@@ -1,4 +1,3 @@
-import devices from 'shared/utils/devices'
 import styled from 'styled-components'
 
 const IndicatorsContainer = styled.div`

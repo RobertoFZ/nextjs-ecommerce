@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { ReactElement } from 'react'
 import { ISlideElement } from 'shared/interfaces/Slider'
 import Indicator from './Indicator'
 import IndicatorsContainer from './IndicatorsContainer'
@@ -13,7 +13,7 @@ const Indicators = ({
 	currentSlide,
 	slides,
 	onSlideChange,
-}: IIndicators) => (
+}: IIndicators): ReactElement => (
 	<IndicatorsContainer>
 		{slides.map((_, index) => {
 			const setCurrentSlide = () => onSlideChange(index)

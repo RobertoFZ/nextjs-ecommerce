@@ -41,7 +41,10 @@ const Navbar: React.FC = ({ ...props }): ReactElement => {
 						<AppItem>
 							<TextAlign align="right">
 								<Button color="inherit">Iniciar sesión</Button>
-								<MenuIconButton color="inherit" arial-label="cart">
+								<MenuIconButton 
+									color="inherit"
+									arial-label="cart"
+								>
 									<ShoppingCartIcon />
 								</MenuIconButton>
 							</TextAlign>

@@ -1,6 +1,7 @@
 import React from 'react'
 import NextHead from 'next/head'
 import { Else, If, Then, When } from 'react-if'
+import { ReactElement } from 'react'
 export interface IOpenGraphMetas {
 	title: string
 	type: string
@@ -21,7 +22,7 @@ type IHead = {
 }
 
 const Head = ({
-	title = "Roberto's NextJS Boilerplate",
+	title = 'Roberto\'s NextJS Boilerplate',
 	description = '',
 	subject = '',
 	copyright = "Roberto's NextJS Boilerplate",
@@ -29,7 +30,7 @@ const Head = ({
 	openGraph,
 	keyworkds = '',
 	noIndex = false,
-}: IHead) => {
+}: IHead): ReactElement => {
 	if (!openGraph) {
 		openGraph = {
 			title,
@@ -145,7 +146,11 @@ const Head = ({
 						property="og:type"
 						content={openGraph.type}
 					/>
-					<meta name="og:url" property="og:url" content={openGraph.url} />
+					<meta 
+						name="og:url"
+						property="og:url"
+						content={openGraph.url}
+					/>
 					<meta
 						name="og:image"
 						property="og:image"

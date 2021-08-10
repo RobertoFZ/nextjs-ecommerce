@@ -55,7 +55,9 @@ const AppButton = styled(Button)`
 
 	@media (min-width: 600px) {
 		${({ lgMargin }: IAppButton) =>
-			`margin-right: ${lgMargin ? `${lgMargin}px` : ''} !important;`}
+		`margin-right: ${lgMargin ? 
+			`${lgMargin}px` : 
+			''} !important;`}
 	}
 `
 

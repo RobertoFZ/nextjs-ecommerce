@@ -27,7 +27,9 @@ const Hero = (): ReactElement => {
 				<Grid item xs={12} lg={6}>
 					<Container>
 						<HeroTitle variant="h1">Stone Crafters</HeroTitle>
-						<HeroSubTitle variant="h4">Mérida, Yucatán</HeroSubTitle>
+						<HeroSubTitle variant="h4">
+							Mérida, Yucatán
+						</HeroSubTitle>
 						<TextAlign sm={EAlign.CENTER} lg={EAlign.LEFT}>
 							<AppButton href="#contained-buttons" lgMargin={50}>
 								Comprar ahora

@@ -4,7 +4,6 @@ import {
 	createMuiTheme,
 	ThemeProvider as MuiThemeProvider,
 } from '@material-ui/core/styles'
-import { NoSsr } from '@material-ui/core'
 import theme from 'shared/constants/theme'
 
 const customTheme = createMuiTheme({

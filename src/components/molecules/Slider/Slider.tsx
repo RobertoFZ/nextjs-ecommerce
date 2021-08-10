@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { ReactElement } from 'react'
 import { useEffect } from 'react'
 import { useState } from 'react'
 import { ISlideElement } from 'shared/interfaces/Slider'
@@ -10,7 +10,7 @@ interface ISlider {
 	slides: ISlideElement[]
 }
 
-const Slider = ({ slides }: ISlider) => {
+const Slider = ({ slides }: ISlider): ReactElement => {
 	const [currentSlide, setCurrentSlide] = useState(0)
 	const onSlideChange = (index: number) => {
 		if (index < slides.length) {
@@ -19,8 +19,6 @@ const Slider = ({ slides }: ISlider) => {
 			setCurrentSlide(0)
 		}
 	}
-
-	useEffect(() => {}, [currentSlide])
 
 	return (
 		<SliderContainer>
