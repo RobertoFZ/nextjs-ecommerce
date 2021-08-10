@@ -1,12 +1,12 @@
 import React, { ReactElement } from 'react'
 import { ThemeProvider } from 'styled-components'
 import {
-	createMuiTheme,
+	createTheme,
 	ThemeProvider as MuiThemeProvider,
 } from '@material-ui/core/styles'
 import theme from 'shared/constants/theme'
 
-const customTheme = createMuiTheme({
+const customTheme = createTheme({
 	palette: {
 		...theme,
 	},
