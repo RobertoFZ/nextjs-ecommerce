@@ -28,17 +28,17 @@ const Hero = (): ReactElement => {
 					<Container>
 						<HeroTitle variant="h1">Stone Crafters</HeroTitle>
 						<HeroSubTitle variant="h4">
-							Mérida, Yucatán
+							From artisans to the world
 						</HeroSubTitle>
 						<TextAlign sm={EAlign.CENTER} lg={EAlign.LEFT}>
 							<AppButton href="#contained-buttons" lgMargin={50}>
-								Comprar ahora
+								Shop now
 							</AppButton>
 							<AppButton
 								backgroundColor={colors.WHITE}
 								href="#contained-buttons"
 							>
-								Ver collección
+								View collection
 							</AppButton>
 						</TextAlign>
 					</Container>
