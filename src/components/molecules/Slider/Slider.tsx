@@ -1,6 +1,4 @@
-import React, { ReactElement } from 'react'
-import { useEffect } from 'react'
-import { useState } from 'react'
+import React, { ReactElement, useState } from 'react'
 import { ISlideElement } from 'shared/interfaces/Slider'
 import Indicators from './Indicators'
 import SliderContainer from './SliderContainer'
