@@ -31,12 +31,14 @@ const ImageGridGallery = ({ images }: IImageGallery): ReactElement => {
 							<ImageActions>
 								<MenuIconButton 
 									color="inherit"
-									arial-label="cart">
+									arial-label="cart"
+									spacing={0}>
 									<ShoppingCartIcon />
 								</MenuIconButton>
 								<MenuIconButton
 									color="inherit"
-									arial-label="see">
+									arial-label="see"
+									spacing={0}>
 									<VisibilityIcon />
 								</MenuIconButton>
 							</ImageActions>
