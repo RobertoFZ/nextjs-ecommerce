@@ -5,7 +5,9 @@ import BugsnagPluginReact from '@bugsnag/plugin-react'
 import { GlobalStyle } from 'components/layouts/GlobalStyle'
 import environment from 'shared/constants/environment'
 import AppTheme from 'components/layouts/AppTheme'
-import '@fontsource/roboto'
+import '@fontsource/roboto/300.css'
+import '@fontsource/roboto/400.css'
+import '@fontsource/roboto/500.css'
 
 const { bugsnagApiKey } = environment
 

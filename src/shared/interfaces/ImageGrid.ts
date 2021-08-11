@@ -6,4 +6,6 @@ export interface ImageGridElement {
 	rowSm: string
 	rowMd: string
 	rowLg: string
+	price: number
+	name: string
 }

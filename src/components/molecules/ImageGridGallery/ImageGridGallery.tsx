@@ -9,6 +9,9 @@ import ImageActions from './ImageActions'
 import ShoppingCartIcon from '@material-ui/icons/ShoppingCart'
 import VisibilityIcon from '@material-ui/icons/Visibility'
 import MenuIconButton from 'components/atoms/Navbar/MenuIconButton'
+import { formatMoney } from 'shared/utils/money'
+import ImagePrice from './ImagePrice'
+import ImageName from './ImageName'
 
 interface IImageGallery {
 	images: ImageGridElement[]
@@ -17,17 +20,27 @@ interface IImageGallery {
 const ImageGridGallery = ({ images }: IImageGallery): ReactElement => {
 	return (
 		<ImageGridContainer>
-			{images.map(({ src, ...rest }) => (
+			{images.map(({ src, price, name, ...rest }) => (
 				<ImageGridItem key={src} {...rest}>
 					<ImageDetail>
-						<ImageActions>
-							<MenuIconButton color="inherit" arial-label="cart">
-								<ShoppingCartIcon />
-							</MenuIconButton>
-							<MenuIconButton color="inherit" arial-label="see">
-								<VisibilityIcon />
-							</MenuIconButton>
-						</ImageActions>
+						<div>
+							<ImageName>{name}</ImageName>
+							<ImagePrice fontWeight="fontWeightLight">
+								{formatMoney(price)}
+							</ImagePrice>
+							<ImageActions>
+								<MenuIconButton 
+									color="inherit"
+									arial-label="cart">
+									<ShoppingCartIcon />
+								</MenuIconButton>
+								<MenuIconButton
+									color="inherit"
+									arial-label="see">
+									<VisibilityIcon />
+								</MenuIconButton>
+							</ImageActions>
+						</div>
 					</ImageDetail>
 					<GalleryImage src={src} />
 				</ImageGridItem>
