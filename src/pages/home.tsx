@@ -9,6 +9,10 @@ import AppButton from 'components/atoms/AppButton'
 import TextAlign from 'components/atoms/TextAlign'
 import Featured from 'components/molecules/Featured'
 import Spacing from 'components/molecules/shared/Spacing'
+import { Typography } from '@material-ui/core'
+// eslint-disable-next-line
+import HorizontalSlider from 'components/molecules/HorizontalSlider/HorizontalSlider'
+import { SLIDER_DATA } from 'shared/data/slider'
 
 const Home = (): ReactNode => {
 	const products: ImageGridElement[] = DUMMY_PRODUCTS
@@ -21,6 +25,13 @@ const Home = (): ReactNode => {
 			</TextAlign>
 			<Spacing spacing={20} />
 			<Featured />
+			<Spacing spacing={15} />
+			<Typography component="h2" variant="h2" align="center">
+				The Craftmans
+			</Typography>
+			<Spacing spacing={5} />
+			<HorizontalSlider products={SLIDER_DATA} />
+			<Spacing spacing={15} />
 		</MainLayout>
 	)
 }
